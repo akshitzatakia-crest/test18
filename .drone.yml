@@ -14,3 +14,37 @@ steps:
     image: alpine
     commands:
       - echo -n "this-is-a-test" > .tags
+
+kind: pipeline
+name: stage1
+
+steps:
+  - name: write
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+  - name: read
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+  - name: update
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+      
+kind: pipeline
+name: stage2
+
+steps:
+  - name: write
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+  - name: read
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+  - name: update
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
